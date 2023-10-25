@@ -1,21 +1,18 @@
 {
   "name": "motion-sensors-polyfill",
-  "version": "0.3.7",
+  "version": "0.4.0",
   "description": "A polyfill for the motion sensors based on the W3C Generic Sensor API",
-  "main": "motion-sensors.js",
-  "module": "motion-sensors.js",
+  "type": "module",
+  "main": "src/motion-sensors.js",
+  "module": "src/motion-sensors.js",
   "files": [
-    "motion-sensors.js",
-    "sensor.js",
-    "geolocation-sensor.js",
-    "/src/"
+    "src"
   ],
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "build": "cp src/*.js .",
-    "test": "npm run build",
+    "lint": "eslint src",
     "checksize": "uglifyjs motion-sensors.js -mc --toplevel | gzip -9 | wc -c"
   },
   "author": "Kenneth Rohde Christiansen <kenneth.christiansen@gmail.com>",
@@ -26,7 +23,6 @@
     "url": "git+https://github.com/kenchris/sensor-polyfills.git"
   },
   "devDependencies": {
-    "eslint": "^5.3.0",
-    "eslint-config-google": "^0.9.1"
+    "eslint": "^8.52.0"
   }
 }
